@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offers - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/offers.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/offers.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoTRAVEL.png" alt="TravelEase Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="offers.html" class="active">Offers</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="login.html" class="auth-btn">Login</a></li>
+        <li><a href="registre.html" class="auth-btn">Register</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Special Offers & Deals</h1>
+        <p>Exclusive discounts on flights, hotels, and vacation packages</p>
+      </div>
+    </section>
+
+    <section class="featured-deals">
+      <h2>Limited Time Offers</h2>
+      <div class="deals-container">
+        <div class="deal-card flash-deal">
+          <div class="deal-badge">FLASH SALE</div>
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Paris Deal">
+          </div>
+          <div class="deal-content">
+            <h3>Paris Weekend Getaway</h3>
+            <div class="deal-details">
+              <p>Round-trip flights + 3 nights hotel</p>
+              <p>Departure: New York (JFK)</p>
+              <p>Valid for travel: Jun 15 - Aug 30</p>
+            </div>
+            <div class="deal-price">
+              <div class="original-price">$1,299</div>
+              <div class="discount-price">$899</div>
+              <div class="discount-badge">-30%</div>
+            </div>
+            <div class="deal-timer">
+              <p>Offer ends in:</p>
+              <div class="countdown" data-end="2023-07-15T23:59:59">
+                <span class="days">2</span>d
+                <span class="hours">18</span>h
+                <span class="minutes">45</span>m
+                <span class="seconds">30</span>s
+              </div>
+            </div>
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-badge">HOT DEAL</div>
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Bali Deal">
+          </div>
+          <div class="deal-content">
+            <h3>Bali Beach Retreat</h3>
+            <div class="deal-details">
+              <p>Round-trip flights + 7 nights resort stay</p>
+              <p>Departure: Los Angeles (LAX)</p>
+              <p>Valid for travel: Sep 1 - Nov 30</p>
+            </div>
+            <div class="deal-price">
+              <div class="original-price">$2,199</div>
+              <div class="discount-price">$1,599</div>
+              <div class="discount-badge">-27%</div>
+            </div>
+            <div class="deal-timer">
+              <p>Offer ends in:</p>
+              <div class="countdown" data-end="2023-07-20T23:59:59">
+                <span class="days">7</span>d
+                <span class="hours">18</span>h
+                <span class="minutes">45</span>m
+                <span class="seconds">30</span>s
+              </div>
+            </div>
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-badge">WEEKEND SPECIAL</div>
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="New York Deal">
+          </div>
+          <div class="deal-content">
+            <h3>New York City Break</h3>
+            <div class="deal-details">
+              <p>Round-trip flights + 4 nights hotel</p>
+              <p>Departure: Chicago (ORD)</p>
+              <p>Valid for travel: Jul 1 - Sep 30</p>
+            </div>
+            <div class="deal-price">
+              <div class="original-price">$1,099</div>
+              <div class="discount-price">$799</div>
+              <div class="discount-badge">-27%</div>
+            </div>
+            <div class="deal-timer">
+              <p>Offer ends in:</p>
+              <div class="countdown" data-end="2023-07-18T23:59:59">
+                <span class="days">5</span>d
+                <span class="hours">18</span>h
+                <span class="minutes">45</span>m
+                <span class="seconds">30</span>s
+              </div>
+            </div>
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flight-deals">
+      <h2>Flight Deals</h2>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Destinations</button>
+        <button class="filter-tab" data-filter="europe">Europe</button>
+        <button class="filter-tab" data-filter="asia">Asia</button>
+        <button class="filter-tab" data-filter="americas">Americas</button>
+      </div>
+      <div class="deals-grid">
+        <div class="deal-item" data-category="europe">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="London">
+            <div class="deal-destination">London</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">New York → London</div>
+            <div class="deal-dates">Aug 15 - Aug 22</div>
+            <div class="deal-airline">British Airways</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$499</span>
+              <span class="price-discount">Save 35%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="deal-item" data-category="europe">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="Paris">
+            <div class="deal-destination">Paris</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">New York → Paris</div>
+            <div class="deal-dates">Sep 10 - Sep 17</div>
+            <div class="deal-airline">Air France</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$529</span>
+              <span class="price-discount">Save 30%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="deal-item" data-category="asia">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="Tokyo">
+            <div class="deal-destination">Tokyo</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">Los Angeles → Tokyo</div>
+            <div class="deal-dates">Oct 5 - Oct 15</div>
+            <div class="deal-airline">Japan Airlines</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$799</span>
+              <span class="price-discount">Save 25%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="deal-item" data-category="americas">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="Cancun">
+            <div class="deal-destination">Cancun</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">Chicago → Cancun</div>
+            <div class="deal-dates">Nov 12 - Nov 19</div>
+            <div class="deal-airline">American Airlines</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$399</span>
+              <span class="price-discount">Save 40%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="deal-item" data-category="asia">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="Bangkok">
+            <div class="deal-destination">Bangkok</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">San Francisco → Bangkok</div>
+            <div class="deal-dates">Sep 20 - Oct 5</div>
+            <div class="deal-airline">Thai Airways</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$749</span>
+              <span class="price-discount">Save 30%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="deal-item" data-category="europe">
+          <div class="deal-image">
+            <img src="/placeholder.svg?height=150&width=250" alt="Rome">
+            <div class="deal-destination">Rome</div>
+          </div>
+          <div class="deal-info">
+            <div class="deal-route">New York → Rome</div>
+            <div class="deal-dates">Aug 25 - Sep 5</div>
+            <div class="deal-airline">Alitalia</div>
+            <div class="deal-price">
+              <span class="price-from">from</span>
+              <span class="price-value">$549</span>
+              <span class="price-discount">Save 35%</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hotel-deals">
+      <h2>Hotel Deals</h2>
+      <div class="deals-slider">
+        <div class="hotel-deal">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Luxury Hotel">
+            <div class="hotel-rating">
+              <span>4.8</span>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="hotel-info">
+            <h3>Grand Plaza Hotel</h3>
+            <div class="hotel-location">New York City, USA</div>
+            <div class="hotel-discount">
+              <span class="discount-badge">40% OFF</span>
+              <span class="discount-details">for stays between Jul 15 - Aug 30</span>
+            </div>
+            <div class="hotel-price">
+              <span class="original-price">$350</span>
+              <span class="discount-price">$210</span>
+              <span class="per-night">per night</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="hotel-deal">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Beach Resort">
+            <div class="hotel-rating">
+              <span>4.6</span>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="hotel-info">
+            <h3>Oceanview Beach Resort</h3>
+            <div class="hotel-location">Miami Beach, USA</div>
+            <div class="hotel-discount">
+              <span class="discount-badge">35% OFF</span>
+              <span class="discount-details">for stays between Sep 1 - Oct 31</span>
+            </div>
+            <div class="hotel-price">
+              <span class="original-price">$420</span>
+              <span class="discount-price">$273</span>
+              <span class="per-night">per night</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+
+        <div class="hotel-deal">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Mountain Lodge">
+            <div class="hotel-rating">
+              <span>4.5</span>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="hotel-info">
+            <h3>Alpine Mountain Lodge</h3>
+            <div class="hotel-location">Aspen, Colorado, USA</div>
+            <div class="hotel-discount">
+              <span class="discount-badge">30% OFF</span>
+              <span class="discount-details">for stays between Nov 15 - Dec 20</span>
+            </div>
+            <div class="hotel-price">
+              <span class="original-price">$380</span>
+              <span class="discount-price">$266</span>
+              <span class="per-night">per night</span>
+            </div>
+            <button class="view-deal-btn">View Deal</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Get Exclusive Deals</h2>
+        <p>Subscribe to our newsletter and be the first to know about our special offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelEase</h3>
+        <p>Your trusted travel companion for flights, hotels, and transportation worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="taxi.html">Taxi</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>lglsi2</p>
+        <p>Phone: +21600000000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TravelEase.fsg</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/wishlist.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoTRAVEL.png" alt="TravelEase Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="wishlist.html" class="active">Wishlist</a></li>
+        <li><a href="login.html" class="auth-btn">Login</a></li>
+        <li><a href="registre.html" class="auth-btn">Register</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Your Travel Wishlist</h1>
+        <p>Save and organize your favorite travel options</p>
+      </div>
+    </section>
+
+    <section class="wishlist-container">
+      <div class="wishlist-header">
+        <h2>My Wishlist</h2>
+        <div class="wishlist-actions">
+          <button id="clear-wishlist" class="clear-wishlist">Clear Wishlist</button>
+          <button id="book-all" class="book-all">Book All</button>
+        </div>
+      </div>
+
+      <div class="wishlist-tabs">
+        <button class="wishlist-tab active" data-section="all-section">All (<span id="all-count">0</span>)</button>
+        <button class="wishlist-tab" data-section="flights-section">Flights (<span id="flights-count">0</span>)</button>
+        <button class="wishlist-tab" data-section="hotels-section">Hotels (<span id="hotels-count">0</span>)</button>
+        <button class="wishlist-tab" data-section="taxis-section">Taxis (<span id="taxis-count">0</span>)</button>
+      </div>
+
+      <div class="wishlist-content">
+        <!-- Empty Wishlist State -->
+        <div id="empty-wishlist" class="wishlist-empty">
+          <h3>Your wishlist is empty</h3>
+          <p>Browse our flights, hotels, and taxi services and add your favorites to the wishlist.</p>
+          <a href="index.html" class="browse-btn">Start Browsing</a>
+        </div>
+
+        <!-- Wishlist Items -->
+        <div id="wishlist-items">
+          <!-- All Items Section -->
+          <div id="all-section" class="wishlist-section active">
+            <div class="wishlist-items">
+              <!-- Items will be populated here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Flights Section -->
+          <div id="flights-section" class="wishlist-section">
+            <div id="flights-container" class="wishlist-items">
+              <!-- Flight items will be populated here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Hotels Section -->
+          <div id="hotels-section" class="wishlist-section">
+            <div id="hotels-container" class="wishlist-items">
+              <!-- Hotel items will be populated here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Taxis Section -->
+          <div id="taxis-section" class="wishlist-section">
+            <div id="taxis-container" class="wishlist-items">
+              <!-- Taxi items will be populated here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelEase</h3>
+        <p>Your trusted travel companion for flights, hotels, and transportation worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="taxi.html">Taxi</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>lglsi2</p>
+        <p>Phone: +21600000000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TravelEase.fsg</p>
+    </div>
+  </footer>
+</body>
+</html>

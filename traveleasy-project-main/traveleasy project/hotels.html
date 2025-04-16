@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hotels.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/hotels.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoTRAVEL.png" alt="TravelEase Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html" class="active">Hotels</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="login.html" class="auth-btn">Login</a></li>
+        <li><a href="registre.html" class="auth-btn">Register</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Find Your Perfect Stay</h1>
+        <p>Book hotels, resorts, and vacation rentals worldwide</p>
+      </div>
+    </section>
+
+    <section class="hotel-search">
+      <div class="search-container">
+        <form id="hotel-search-form">
+          <div class="search-row">
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" id="destination" name="destination" placeholder="City, Region, or Property" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="check-in">Check-in Date</label>
+              <input type="date" id="check-in" name="check-in" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="check-out">Check-out Date</label>
+              <input type="date" id="check-out" name="check-out" required>
+            </div>
+          </div>
+          
+          <div class="search-row">
+            <div class="form-group">
+              <label for="rooms">Rooms</label>
+              <select id="rooms" name="rooms">
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="adults">Adults</label>
+              <select id="adults" name="adults">
+                <option value="1">1 Adult</option>
+                <option value="2">2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="children">Children</label>
+              <select id="children" name="children">
+                <option value="0">0 Children</option>
+                <option value="1">1 Child</option>
+                <option value="2">2 Children</option>
+                <option value="3">3 Children</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="search-btn">Search Hotels</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="hotel-results">
+      <h2>Available Hotels</h2>
+      <div class="filters">
+        <div class="filter-group">
+          <label>Price Range:</label>
+          <input type="range" min="50" max="1000" value="300" class="price-slider" id="price-range">
+          <span class="price-value">$300</span>
+        </div>
+        <div class="filter-group">
+          <label>Star Rating:</label>
+          <select id="star-filter">
+            <option value="all">All Ratings</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars & Up</option>
+            <option value="3">3 Stars & Up</option>
+            <option value="2">2 Stars & Up</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Property Type:</label>
+          <select id="property-filter">
+            <option value="all">All Properties</option>
+            <option value="hotel">Hotels</option>
+            <option value="resort">Resorts</option>
+            <option value="apartment">Apartments</option>
+            <option value="villa">Villas</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="hotel-list" id="hotel-results">
+        <div class="hotel-card">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Grand Hotel">
+            <div class="hotel-rating">
+              <span>4.5</span>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="hotel-details">
+            <h3>Grand Hotel & Spa</h3>
+            <div class="hotel-location">New York City, USA</div>
+            <div class="hotel-amenities">
+              <span>Free WiFi</span>
+              <span>Pool</span>
+              <span>Spa</span>
+              <span>Restaurant</span>
+            </div>
+            <div class="hotel-description">
+              Luxury hotel in the heart of Manhattan with stunning views of Central Park.
+            </div>
+          </div>
+          <div class="hotel-booking">
+            <div class="hotel-price">
+              <span class="price">$250</span>
+              <span class="per-night">per night</span>
+            </div>
+            <div class="hotel-actions">
+              <button class="add-to-wishlist" data-hotel-id="1">Add to Wishlist</button>
+              <button class="book-now">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="Seaside Resort">
+            <div class="hotel-rating">
+              <span>4.8</span>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="hotel-details">
+            <h3>Seaside Resort & Spa</h3>
+            <div class="hotel-location">Miami Beach, USA</div>
+            <div class="hotel-amenities">
+              <span>Beachfront</span>
+              <span>Pool</span>
+              <span>Spa</span>
+              <span>Free Breakfast</span>
+            </div>
+            <div class="hotel-description">
+              Beachfront resort with private access to Miami Beach and world-class amenities.
+            </div>
+          </div>
+          <div class="hotel-booking">
+            <div class="hotel-price">
+              <span class="price">$320</span>
+              <span class="per-night">per night</span>
+            </div>
+            <div class="hotel-actions">
+              <button class="add-to-wishlist" data-hotel-id="2">Add to Wishlist</button>
+              <button class="book-now">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hotel-card">
+          <div class="hotel-image">
+            <img src="/placeholder.svg?height=200&width=300" alt="City Suites">
+            <div class="hotel-rating">
+              <span>4.2</span>
+              <div class="stars">★★★★☆</div>
+            </div>
+          </div>
+          <div class="hotel-details">
+            <h3>City Suites</h3>
+            <div class="hotel-location">Chicago, USA</div>
+            <div class="hotel-amenities">
+              <span>Free WiFi</span>
+              <span>Fitness Center</span>
+              <span>Business Center</span>
+              <span>Restaurant</span>
+            </div>
+            <div class="hotel-description">
+              Modern suites in downtown Chicago, perfect for business travelers and tourists alike.
+            </div>
+          </div>
+          <div class="hotel-booking">
+            <div class="hotel-price">
+              <span class="price">$180</span>
+              <span class="per-night">per night</span>
+            </div>
+            <div class="hotel-actions">
+              <button class="add-to-wishlist" data-hotel-id="3">Add to Wishlist</button>
+              <button class="book-now">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelEase</h3>
+        <p>Your trusted travel companion for flights, hotels, and transportation worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="taxi.html">Taxi</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>lglsi2</p>
+        <p>Phone:+21600000000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TravelEase.fsg</p>
+    </div>
+  </footer>
+</body>
+</html>

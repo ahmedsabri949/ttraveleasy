@@ -1,0 +1,594 @@
+/* Offers Page Styles */
+
+.page-banner {
+  background-image: url("../images/bgReg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+}
+
+/* Featured Deals Section */
+.featured-deals {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.featured-deals h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.deal-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  width: 350px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.deal-badge {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.flash-deal .deal-badge {
+  background-color: #ff3e3e;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.deal-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.deal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.deal-card:hover .deal-image img {
+  transform: scale(1.05);
+}
+
+.deal-content {
+  padding: 20px;
+}
+
+.deal-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.deal-details {
+  margin-bottom: 15px;
+}
+
+.deal-details p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.deal-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.discount-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.discount-badge {
+  margin-left: auto;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.deal-timer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.deal-timer p {
+  margin: 0 0 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.countdown span {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.book-now-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* Flight Deals Section */
+.flight-deals {
+  padding: 60px 20px;
+}
+
+.flight-deals h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-tab {
+  padding: 8px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.deal-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.deal-image {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.deal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deal-destination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 15px 10px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.deal-info {
+  padding: 15px;
+}
+
+.deal-route {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.deal-dates,
+.deal-airline {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.deal-price {
+  margin: 15px 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.price-from {
+  font-size: 0.8rem;
+  color: #999;
+  margin-right: 5px;
+}
+
+.price-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.price-discount {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.view-deal-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.view-deal-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* Hotel Deals Section */
+.hotel-deals {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.hotel-deals h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.deals-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hotel-deal {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-deal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hotel-deal:hover .hotel-image img {
+  transform: scale(1.05);
+}
+
+.hotel-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hotel-rating span {
+  font-weight: bold;
+  color: #333;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.hotel-info {
+  padding: 20px;
+}
+
+.hotel-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.hotel-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.hotel-discount {
+  margin-bottom: 15px;
+}
+
+.discount-badge {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.discount-details {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.hotel-price {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.discount-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.per-night {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Newsletter Section */
+.newsletter {
+  padding: 60px 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 12px 25px;
+  background-color: var(--secondary-color);
+  color: #333;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #5bc0d3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .deals-container,
+  .deals-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deal-card,
+  .hotel-deal {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Booking - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/taxi.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/taxi.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoTRAVEL.png" alt="TravelEase Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="taxi.html" class="active">Taxi</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="login.html" class="auth-btn">Login</a></li>
+        <li><a href="registre.html" class="auth-btn">Register</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Book a Taxi or Ride</h1>
+        <p>Reliable transportation at your destination</p>
+      </div>
+    </section>
+
+    <section class="taxi-booking">
+      <div class="booking-container">
+        <div class="booking-tabs">
+          <button class="tab-btn active" data-tab="taxi">Taxi</button>
+          <button class="tab-btn" data-tab="rideshare">Rideshare</button>
+          <button class="tab-btn" data-tab="airport">Airport Transfer</button>
+        </div>
+        
+        <div class="tab-content active" id="taxi-tab">
+          <form id="taxi-booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickup-location">Pickup Location</label>
+                <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup address" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="dropoff-location">Dropoff Location</label>
+                <input type="text" id="dropoff-location" name="dropoff-location" placeholder="Enter destination address" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="pickup-time">Pickup Time</label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="passengers">Passengers</label>
+                <select id="passengers" name="passengers">
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5+ People</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="taxi-type">Vehicle Type</label>
+                <select id="taxi-type" name="taxi-type">
+                  <option value="standard">Standard Taxi</option>
+                  <option value="premium">Premium Sedan</option>
+                  <option value="suv">SUV</option>
+                  <option value="van">Minivan</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method">
+                  <option value="card">Credit/Debit Card</option>
+                  <option value="cash">Cash</option>
+                  <option value="paypal">PayPal</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" class="book-btn">Book Taxi</button>
+          </form>
+        </div>
+        
+        <div class="tab-content" id="rideshare-tab">
+          <form id="rideshare-booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rs-pickup-location">Pickup Location</label>
+                <input type="text" id="rs-pickup-location" name="rs-pickup-location" placeholder="Enter pickup address" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="rs-dropoff-location">Dropoff Location</label>
+                <input type="text" id="rs-dropoff-location" name="rs-dropoff-location" placeholder="Enter destination address" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rs-pickup-now">Pickup Time</label>
+                <div class="radio-group">
+                  <label>
+                    <input type="radio" name="rs-pickup-time" value="now" checked> Now
+                  </label>
+                  <label>
+                    <input type="radio" name="rs-pickup-time" value="schedule"> Schedule
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group schedule-time hidden">
+                <label for="rs-pickup-date">Date</label>
+                <input type="date" id="rs-pickup-date" name="rs-pickup-date">
+              </div>
+              
+              <div class="form-group schedule-time hidden">
+                <label for="rs-pickup-time">Time</label>
+                <input type="time" id="rs-pickup-time" name="rs-pickup-time">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rs-service-type">Service Type</label>
+                <select id="rs-service-type" name="rs-service-type">
+                  <option value="economy">Economy (Shared)</option>
+                  <option value="standard">Standard</option>
+                  <option value="premium">Premium</option>
+                  <option value="xl">XL (6+ passengers)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="rs-passengers">Passengers</label>
+                <select id="rs-passengers" name="rs-passengers">
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5+ People</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" class="book-btn">Request Ride</button>
+          </form>
+        </div>
+        
+        <div class="tab-content" id="airport-tab">
+          <form id="airport-transfer-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="transfer-type">Transfer Type</label>
+                <select id="transfer-type" name="transfer-type">
+                  <option value="airport-to-hotel">Airport to Hotel</option>
+                  <option value="hotel-to-airport">Hotel to Airport</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="airport">Airport</label>
+                <input type="text" id="airport" name="airport" placeholder="Enter airport name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="hotel">Hotel/Address</label>
+                <input type="text" id="hotel" name="hotel" placeholder="Enter hotel or address" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="transfer-date">Date</label>
+                <input type="date" id="transfer-date" name="transfer-date" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="transfer-time">Time</label>
+                <input type="time" id="transfer-time" name="transfer-time" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="flight-number">Flight Number</label>
+                <input type="text" id="flight-number" name="flight-number" placeholder="Optional">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="transfer-passengers">Passengers</label>
+                <select id="transfer-passengers" name="transfer-passengers">
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5+ People</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="luggage">Luggage</label>
+                <select id="luggage" name="luggage">
+                  <option value="1">1 Bag</option>
+                  <option value="2">2 Bags</option>
+                  <option value="3">3 Bags</option>
+                  <option value="4">4+ Bags</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="transfer-vehicle">Vehicle Type</label>
+                <select id="transfer-vehicle" name="transfer-vehicle">
+                  <option value="sedan">Sedan</option>
+                  <option value="suv">SUV</option>
+                  <option value="van">Minivan</option>
+                  <option value="luxury">Luxury Car</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" class="book-btn">Book Transfer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h2>Estimated Route</h2>
+      <div id="map-container">
+        <!-- Map will be displayed here -->
+        <div class="map-placeholder">
+          <img src="/placeholder.svg?height=400&width=800" alt="Map">
+          <div class="map-overlay">Enter pickup and dropoff locations to see the route</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="taxi-services">
+      <h2>Our Transportation Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚕</div>
+          <h3>Standard Taxi</h3>
+          <p>Affordable and reliable taxi service for up to 4 passengers.</p>
+          <div class="service-price">From $15</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚙</div>
+          <h3>Premium Sedan</h3>
+          <p>Luxury sedan with professional driver for a comfortable ride.</p>
+          <div class="service-price">From $25</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚐</div>
+          <h3>Minivan</h3>
+          <p>Spacious minivan for groups up to 7 passengers with luggage.</p>
+          <div class="service-price">From $35</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚍</div>
+          <h3>Airport Shuttle</h3>
+          <p>Dedicated airport transfer service with flight tracking.</p>
+          <div class="service-price">From $40</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelEase</h3>
+        <p>Your trusted travel companion for flights, hotels, and transportation worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="taxi.html">Taxi</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>lglsi2</p>
+        <p>Phone:+21600000000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TravelEase.fsg</p>
+    </div>
+  </footer>
+</body>
+</html>

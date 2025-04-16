@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flights.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/flights.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoTRAVEL.png" alt="TravelEase Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flights.html" class="active">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="login.html" class="auth-btn">Login</a></li>
+        <li><a href="registre.html" class="auth-btn">Register</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Find Your Perfect Flight</h1>
+        <p>Compare prices and book flights to destinations worldwide</p>
+      </div>
+    </section>
+
+    <section class="flight-search">
+      <div class="search-container">
+        <form id="flight-search-form">
+          <div class="trip-type">
+            <label>
+              <input type="radio" name="trip-type" value="round-trip" checked> Round Trip
+            </label>
+            <label>
+              <input type="radio" name="trip-type" value="one-way"> One Way
+            </label>
+            <label>
+              <input type="radio" name="trip-type" value="multi-city"> Multi-City
+            </label>
+          </div>
+          
+          <div class="search-row">
+            <div class="form-group">
+              <label for="departure">From</label>
+              <input type="text" id="departure" name="departure" placeholder="City or Airport" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="destination">To</label>
+              <input type="text" id="destination" name="destination" placeholder="City or Airport" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="departure-date">Departure Date</label>
+              <input type="date" id="departure-date" name="departure-date" required>
+            </div>
+            
+            <div class="form-group return-date">
+              <label for="return-date">Return Date</label>
+              <input type="date" id="return-date" name="return-date" required>
+            </div>
+          </div>
+          
+          <div class="search-row">
+            <div class="form-group">
+              <label for="passengers">Passengers</label>
+              <select id="passengers" name="passengers">
+                <option value="1">1 Adult</option>
+                <option value="2">2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+                <option value="5">5 Adults</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="class">Class</label>
+              <select id="class" name="class">
+                <option value="economy">Economy</option>
+                <option value="premium-economy">Premium Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="search-btn">Search Flights</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="flight-results">
+      <h2>Available Flights</h2>
+      <div class="filters">
+        <div class="filter-group">
+          <label>Price Range:</label>
+          <input type="range" min="100" max="2000" value="1000" class="price-slider" id="price-range">
+          <span class="price-value">$1000</span>
+        </div>
+        <div class="filter-group">
+          <label>Airlines:</label>
+          <select id="airline-filter">
+            <option value="all">All Airlines</option>
+            <option value="delta">Delta Airlines</option>
+            <option value="american">American Airlines</option>
+            <option value="united">United Airlines</option>
+            <option value="lufthansa">Lufthansa</option>
+            <option value="emirates">Emirates</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Stops:</label>
+          <select id="stops-filter">
+            <option value="all">All</option>
+            <option value="nonstop">Non-stop</option>
+            <option value="1-stop">1 Stop</option>
+            <option value="2-stops">2+ Stops</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="flight-list" id="flight-results">
+        <div class="flight-card">
+          <div class="flight-header">
+            <div class="airline">
+              <img src="/placeholder.svg?height=40&width=40" alt="Delta Airlines">
+              <span>Delta Airlines</span>
+            </div>
+            <div class="flight-price">$450</div>
+          </div>
+          <div class="flight-details">
+            <div class="flight-route">
+              <div class="departure">
+                <div class="time">08:30</div>
+                <div class="airport">JFK</div>
+              </div>
+              <div class="flight-duration">
+                <div class="duration">7h 15m</div>
+                <div class="line"></div>
+                <div class="stops">Non-stop</div>
+              </div>
+              <div class="arrival">
+                <div class="time">15:45</div>
+                <div class="airport">LHR</div>
+              </div>
+            </div>
+          </div>
+          <div class="flight-actions">
+            <button class="add-to-wishlist" data-flight-id="1">Add to Wishlist</button>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+        
+        <div class="flight-card">
+          <div class="flight-header">
+            <div class="airline">
+              <img src="/placeholder.svg?height=40&width=40" alt="American Airlines">
+              <span>American Airlines</span>
+            </div>
+            <div class="flight-price">$520</div>
+          </div>
+          <div class="flight-details">
+            <div class="flight-route">
+              <div class="departure">
+                <div class="time">10:15</div>
+                <div class="airport">JFK</div>
+              </div>
+              <div class="flight-duration">
+                <div class="duration">8h 30m</div>
+                <div class="line"></div>
+                <div class="stops">1 stop (ORD)</div>
+              </div>
+              <div class="arrival">
+                <div class="time">18:45</div>
+                <div class="airport">LHR</div>
+              </div>
+            </div>
+          </div>
+          <div class="flight-actions">
+            <button class="add-to-wishlist" data-flight-id="2">Add to Wishlist</button>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+        
+        <div class="flight-card">
+          <div class="flight-header">
+            <div class="airline">
+              <img src="/placeholder.svg?height=40&width=40" alt="Emirates">
+              <span>Emirates</span>
+            </div>
+            <div class="flight-price">$680</div>
+          </div>
+          <div class="flight-details">
+            <div class="flight-route">
+              <div class="departure">
+                <div class="time">19:30</div>
+                <div class="airport">JFK</div>
+              </div>
+              <div class="flight-duration">
+                <div class="duration">12h 45m</div>
+                <div class="line"></div>
+                <div class="stops">1 stop (DXB)</div>
+              </div>
+              <div class="arrival">
+                <div class="time">08:15</div>
+                <div class="airport">LHR</div>
+              </div>
+            </div>
+          </div>
+          <div class="flight-actions">
+            <button class="add-to-wishlist" data-flight-id="3">Add to Wishlist</button>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelEase</h3>
+        <p>Your trusted travel companion for flights, hotels, and transportation worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="taxi.html">Taxi</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>lglsi2</p>
+        <p>Phone:+21600000000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TravelEase.fsg</p>
+    </div>
+  </footer>
+</body>
+</html>

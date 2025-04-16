@@ -1,0 +1,209 @@
+/* Register Page Styles */
+
+.auth-container {
+  display: flex;
+  min-height: calc(100vh - 200px);
+  padding: 50px 20px;
+  background-image: url("../images/bgReg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.travel-info {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.travel-info img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.travel-info .desc {
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.auth-form {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+.g-recaptcha {
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+.auth-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.auth-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: var(--secondary-color);
+}
+
+.social-login {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-login p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.google-btn {
+  background-color: #db4437;
+  color: white;
+}
+
+.facebook-btn {
+  background-color: #4267b2;
+  color: white;
+}
+
+.social-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .auth-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .travel-info {
+    margin-bottom: 30px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+}
